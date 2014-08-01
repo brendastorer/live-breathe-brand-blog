@@ -1,0 +1,14 @@
+body {
+  background-color: $soft-white;
+  color: $soft-black;
+}
+
+.main-fluid {
+  margin: $page-top-margin auto 0 auto;
+  padding: 0 50px;
+  max-width: 1300px;
+
+  @include breakpoint(small) {
+    padding: 0 30px;
+  }
+}

@@ -1,0 +1,146 @@
+.single-post {
+
+  .main-fluid {
+
+    @include breakpoint(small) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .article {
+    margin-bottom: 60px;
+  }
+
+  .title {
+    @include breakpoint(small) {
+      margin: 0 20px;
+    }
+  }
+
+  .wp-post-image {
+    margin-bottom: 40px;
+  }
+
+  .single-header {
+    width: 740px;
+    margin-left: -80px;
+    text-align: center;
+
+    @include breakpoint(small) {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .wp-post-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  #content {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .the-content, .single-post-meta, .single-post-comments {
+    @include breakpoint(small) {
+      padding: 0 30px;
+    }
+  }
+
+  .category-live {
+
+    .title {
+      @extend %live-header;
+      font-size: 2.5rem;
+    }
+
+    #respond {
+      h3 {
+        @extend %live-header;
+        font-size: 1.5rem;
+      }
+    }
+
+    h3#comments {
+      @extend %live-header;
+      font-size: 1.5rem;
+    }
+  }
+
+  .category-breathe {
+
+    .title {
+      @extend %breathe-header;
+      font-size: 3rem;
+    }
+
+    #respond {
+      h3 {
+        @extend %breathe-header;
+        font-size: 1.5rem;
+      }
+    }
+
+    h3#comments {
+      @extend %breathe-header;
+      font-size: 1.5rem;
+    }
+  }
+
+  .category-brand {
+
+    .title {
+       @extend %brand-header;
+      font-size: 2.4rem;
+    }
+
+    #respond {
+      h3 {
+         @extend %brand-header;
+        font-size: 1.5rem;
+      }
+    }
+
+    h3#comments {
+      @extend %brand-header;
+      font-size: 1.5rem;
+    }
+  }
+
+  .title {
+    margin-bottom: 1em;
+  }
+
+  .the-content {
+
+    p {
+      color: $soft-black;
+      font-size: 1rem;
+      line-height: 1.6em;
+    }
+  }
+}
+
+.single-post-meta {
+  @extend %small-copy;
+
+  div {
+    margin-bottom: 10px;
+  }
+
+  .category {
+
+    ul {
+      display: inline;
+      list-style-type: none;
+      margin: 0;
+
+      li {
+        display: inline;
+      }
+    }
+  }
+}

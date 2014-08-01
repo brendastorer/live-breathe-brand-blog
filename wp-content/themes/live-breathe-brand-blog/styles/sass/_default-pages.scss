@@ -1,0 +1,34 @@
+.page-template-default {
+
+  .title {
+    @extend %brand-header;
+    text-align: center;
+  }
+
+  #primary {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+
+    .the-content {
+
+      img {
+        width: auto;
+
+        @include breakpoint(xsmall) {
+          width: 100%;
+          height: auto;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    a {
+    color: $brand-color;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+  }
+}

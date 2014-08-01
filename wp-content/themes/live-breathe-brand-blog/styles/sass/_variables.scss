@@ -1,0 +1,136 @@
+// Colors
+
+$live-color: #fc6363;
+$breathe-color: #f9a2a2;
+$brand-color: #e52323;
+$soft-white: #fcfcfc;
+$white: #fff;
+$soft-black: #303030;
+$dark-gray: #4a4a4a;
+$medium-gray: #d8d6d6;
+$light-gray: #f7f7f7;
+
+// Fonts
+
+$live-font: 'Playfair Display', serif;
+$breathe-font: 'Arapey', cursive;
+$brand-font: 'Montserrat', sans-serif;
+
+$page-top-margin: 110px;
+$column-width: 30.2%;
+$column-margin: 4.3%;
+
+// Media Queries
+@mixin breakpoint($point) {
+  @if $point == large {
+    @media (max-width: 1060px) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: 850px) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 750px) { @content; }
+  }
+  @else if $point == xsmall {
+    @media (max-width: 600px)  { @content; }
+  }
+}
+
+// Extends
+%live-header {
+  color: $live-color;
+  font-family: $live-font;
+  font-style: normal;
+}
+
+%breathe-header {
+  color: $breathe-color;
+  font-family: $breathe-font;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+%brand-header {
+  color: $brand-color;
+  font-family: $brand-font;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+%small-copy {
+  color: $soft-black;
+  font-size: 11px;
+  font-size: .7rem;
+  text-transform: uppercase;
+}
+
+%transition {
+  -webkit-transition: color 0.1s ease,background-color 0.1s ease,border-color 0.1s ease,opacity 0.1s ease;
+  -moz-transition: color 0.1s ease,background-color 0.1s ease,border-color 0.1s ease,opacity 0.1s ease;
+  -ms-transition: color 0.1s ease,background-color 0.1s ease,border-color 0.1s ease,opacity 0.1s ease;
+  -o-transition: color 0.1s ease,background-color 0.1s ease,border-color 0.1s ease,opacity 0.1s ease;
+  transition: color 0.1s ease,background-color 0.1s ease,border-color 0.1s ease,opacity 0.1s ease;
+
+}
+
+%meta-footer {
+  background-color: $light-gray;
+  padding: 5px 10px;
+}
+
+%single-column-width {
+  margin: 0 auto !important;
+  max-width: 620px;
+  width: 90%;
+
+  @include breakpoint(small) {
+    width: 100%;
+  }
+}
+
+%clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Animations
+%selected-animation {
+  -ms-animation: selected 1s;
+  -webkit-animation: selected 1s;
+  animation: selected 1s;
+}
+
+@-webkit-keyframes selected {
+
+  from {
+    opacity: .1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+// Mixins
+@mixin button {
+  @extend %transition;
+  background-color: $medium-gray;
+  color: $soft-black;
+  font-size: .8em;
+  text-transform: uppercase;
+  padding: 1em 1.5em;
+
+  &:hover {
+    background-color: shade($medium-gray,10%);
+    box-shadow: none;
+  }
+}

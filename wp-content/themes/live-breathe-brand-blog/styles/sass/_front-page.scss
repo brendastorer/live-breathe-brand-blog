@@ -1,0 +1,34 @@
+.column-container {
+  @extend %clearfix;
+  float: left;
+  width: $column-width;
+
+  &.breathe {
+    margin-left: $column-margin;
+    margin-right: $column-margin;
+  }
+
+  &.selected {
+    @extend %selected-animation;
+    @extend %single-column-width;
+    -webkit-transform: translateX(0px);
+    float: none !important;
+  }
+
+  &.off-screen {
+    display: none;
+  }
+}
+
+.column-category-link {
+  font-size: 1.1em;
+  margin-bottom: 60px;
+  text-align: center;
+
+  &:after {
+    content: '\203A';
+    margin-left: 5px;
+  }
+}
+
+

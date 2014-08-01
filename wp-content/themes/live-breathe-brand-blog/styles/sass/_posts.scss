@@ -1,0 +1,93 @@
+.category-posts, .home-category-posts {
+
+  .post {
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: $white;
+    background-color: $white;
+    border-left: 1px solid $light-gray;
+    border-right: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    margin-bottom: 50px;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+
+    &.category-live {
+      border-top-color: $live-color;
+    }
+
+    &.category-breathe {
+      border-top-color: $breathe-color;
+    }
+
+    &.category-brand {
+      border-top-color: $brand-color;
+    }
+  }
+}
+
+.column-post-title {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.column-post {
+  margin-top: 10px;
+  padding: 0 20px;
+  word-wrap: break-word;
+}
+
+.column-post-content {
+  color: $soft-black;
+  margin: 15px 0;
+}
+
+.column-post-footer {
+  @extend %meta-footer;
+}
+
+.column-post-icon {
+  float: right;
+}
+
+.column-post-date {
+  @extend %small-copy;
+}
+
+/**
+ *  Twitter posts
+ *
+*/
+
+.format-status .column-post-title {
+  display:none;
+}
+
+/**
+ *  Instagram posts
+ *
+*/
+
+.format-image .column-post-title {
+  display:none;
+}
+
+/**
+ *  Quote posts
+ *
+*/
+
+.format-quote .column-post-title {
+  display:none;
+}
+
+.format-quote .column-post-content p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-style: oblique;
+}
+

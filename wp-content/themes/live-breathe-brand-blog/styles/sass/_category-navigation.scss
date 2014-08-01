@@ -1,0 +1,88 @@
+.category-navigation {
+  margin-bottom: 80px;
+  width: 100%;
+
+  @include breakpoint(xsmall) {
+    margin-bottom: 50px;
+  }
+}
+
+.column-category-title {
+  width: $column-width;
+  display: inline-block;
+  font-size: 60px;
+  font-size: 3.75rem;
+  line-height: 1em;
+  text-align: center;
+
+  @include breakpoint(large) {
+    margin: 0 auto 30px auto;
+    width: 100%;
+  }
+
+  @include breakpoint(xsmall) {
+    font-size: 40px;
+  }
+
+  &:nth-child(2) {
+    margin-left: $column-margin;
+    margin-right: $column-margin;
+
+    @include breakpoint(large) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: shade($light-gray, 5%);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.live-navigation {
+  @extend %live-header;
+  text-transform: capitalize;
+
+  &:hover, &.active {
+    color: $live-color;
+  }
+}
+
+.breathe-navigation {
+  @extend %breathe-header;
+
+  &:hover, &.active {
+    color: $breathe-color;
+  }
+}
+
+.brand-navigation {
+   @extend %brand-header;
+
+ &:hover, &.active {
+    color: $brand-color;
+  }
+}
+
+.category-live .live-navigation {
+  color: $live-color;
+}
+
+.category-breathe .breathe-navigation {
+  color: $breathe-color;
+}
+
+.category-brand .brand-navigation {
+  color: $brand-color;
+}
+
+.home .live-navigation:hover,
+.home .breathe-navigation:hover,
+.home .brand-navigation:hover {
+  opacity: .5;
+}
+

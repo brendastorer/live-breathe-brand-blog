@@ -1,0 +1,46 @@
+.live, .category-live {
+
+  a {
+    color: $live-color;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  .colorize {
+    color: $live-color;
+  }
+
+  .column-post-title {
+    @extend %live-header;
+    line-height: 1.3em;
+  }
+
+  .column-post-icon {
+    color: $live-color;
+  }
+
+  .column-category-link {
+    @extend %live-header;
+    text-transform: capitalize;
+  }
+
+  input[type=text], input[type=email], textarea {
+
+    &:focus {
+      border: 1px solid tint($live-color, 60%);
+      outline: none;
+    }
+  }
+
+  #pagination {
+    @extend %live-header;
+  }
+}
+
+body.category.category-live {
+  .column-category-title.live {
+    color: $live-color;
+  }
+}

@@ -1,0 +1,50 @@
+body.category, body.tag {
+
+  .category-posts {
+    @extend %single-column-width;
+  }
+
+  #content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .post {
+    background-color: $white;
+    margin-bottom: 50px;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  #pagination {
+    @extend %single-column-width;
+
+    .past-page {
+
+      a {
+        padding: 0;
+
+        &:after {
+          content: '\203A';
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .next-page {
+      border: none;
+
+       a {
+        padding: 0;
+
+        &:before {
+          content: '\2039';
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

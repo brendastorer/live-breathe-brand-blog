@@ -1,0 +1,45 @@
+.brand, .category-brand {
+
+  a {
+    color: $brand-color;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  .colorize {
+    color: $brand-color;
+  }
+
+  .column-post-title {
+     @extend %brand-header;
+  }
+
+  .column-post-icon {
+    color: $brand-color;
+  }
+
+  .column-category-link {
+    @extend %brand-header;
+    font-size: 1em;
+  }
+
+  input[type=text], input[type=email], textarea {
+
+    &:focus {
+      border: 1px solid tint($brand-color, 50%);
+      outline: none;
+    }
+  }
+
+  #pagination {
+    @extend %brand-header;
+  }
+}
+
+body.category.category-brand {
+  .column-category-title.brand {
+    color: $brand-color;
+  }
+}

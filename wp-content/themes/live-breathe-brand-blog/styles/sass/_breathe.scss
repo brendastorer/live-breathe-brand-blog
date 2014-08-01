@@ -1,0 +1,49 @@
+.breathe, .category-breathe {
+
+  a {
+    color: $breathe-color;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  .colorize {
+    color: $breathe-color;
+  }
+
+  .column-post-title {
+    @extend %breathe-header;
+    font-size: 28px;
+    font-size: 1.8rem;
+    line-height: 1.1em;
+  }
+
+  .column-post-icon {
+    color: $breathe-color;
+  }
+
+  .column-category-link {
+    @extend %breathe-header;
+    font-size: 1.2em;
+  }
+
+  input[type=text], input[type=email], textarea {
+
+    &:focus {
+      border: 1px solid tint($breathe-color, 50%);
+      outline: none;
+    }
+  }
+
+  #pagination {
+    @extend %breathe-header;
+    font-size: 1.2em;
+  }
+}
+
+body.category.category-breathe {
+  .column-category-title.breathe {
+    color: $breathe-color;
+  }
+}

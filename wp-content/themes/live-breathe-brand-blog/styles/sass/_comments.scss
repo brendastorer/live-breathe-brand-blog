@@ -1,0 +1,74 @@
+#respond {
+  color: $soft-black;
+
+  button, input[type="button"], input[type="reset"], input[type="submit"] {
+    @include button;
+  }
+
+  #cancel-comment-reply {
+    margin-bottom: 20px;
+  }
+}
+
+input[type=text], input[type=email], textarea {
+  color: $soft-black;
+  border: 1px solid shade($light-gray, 5%);
+}
+
+input[type=text], input[type=email] {
+  padding: 5px 8px;
+}
+
+#respond form label {
+  color: $soft-black;
+  margin-left: 10px;
+}
+
+h3#comments {
+  margin-bottom: 20px;
+}
+
+.commentlist {
+  margin-bottom: 80px;
+
+  .avatar {
+    display: none;
+  }
+
+  .comment {
+    background-color: $white;
+    box-shadow: none;
+    border: 1px solid $light-gray;
+    margin: 0 0 20px 0;
+
+    .children {
+      margin: 0;
+    }
+
+    .comment {
+      margin: 20px 0;
+      border: none;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  cite {
+    font-style: normal;
+  }
+
+  .reply, cite, .comment-awaiting-moderation {
+    font-size: .8em;
+  }
+
+  .comment-awaiting-moderation {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .comment-meta {
+    @extend %small-copy;
+    line-height: 1.7em;
+  }
+}
